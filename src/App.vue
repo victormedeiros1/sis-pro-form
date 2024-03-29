@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
   import Container from '@/components/Container/Container.vue'
-  import InputText from 'primevue/inputtext'
 
   const submitForm = (e: Event): void => {
     e.preventDefault()
