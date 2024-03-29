@@ -1,7 +1,11 @@
 <template>
-  <h1>SisProForms</h1>
+  <Container>
+    <h1>SisProForms</h1>
+  </Container>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import Container from '@/components/Container/Container.vue'
+</script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
