@@ -1,3 +1,15 @@
 * {
     box-sizing: border-box;
 }
+
+label {
+    font-size: 500;
+    font-size: 14px;
+    color: $dark;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
