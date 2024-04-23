@@ -1,9 +1,9 @@
 <template>
-  <Main />
+  <Navbar />
 </template>
 
 <script setup lang="ts">
-  import Main from '@/pages/Main/Main.vue'
+  import Navbar from '@/components/Navbar/Navbar.vue'
 </script>
 
 <style scoped lang="scss"></style>

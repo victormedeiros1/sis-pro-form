@@ -2,14 +2,22 @@
     box-sizing: border-box;
 }
 
-label {
-    font-size: 500;
-    font-size: 14px;
-    color: $dark;
+body {
+    padding: 0;
+    margin: 0;
 }
 
-.form__group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+// Menubar
+.menubar {
+    .p-menuitem {
+        margin: 0;
+    
+        .p-menuitem-icon {
+            color: var(--gray-700);
+        }
+    
+        .p-menuitem-text {
+            font-size: $fs-14;
+        }
+    }   
 }
