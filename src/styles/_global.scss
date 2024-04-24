@@ -3,8 +3,23 @@
 }
 
 body {
+  background-image: url('@/assets/images/background1920x1080.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $dark;
+  margin: 0;
+  padding: 0;
 }
 
 // Menubar
