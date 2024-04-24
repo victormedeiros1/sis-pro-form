@@ -1,7 +1,11 @@
 <template>
   <Menubar class="menubar" :model="items">
     <template #start>
-      <img class="menubar__logo" src="@/assets/images/logo.svg" alt="logo" />
+      <img
+        class="menubar__logo"
+        src="@/assets/images/logo30x30.svg"
+        alt="sisproform logo"
+      />
     </template>
   </Menubar>
 </template>
@@ -25,9 +29,12 @@
 
 <style scoped lang="scss">
   .menubar {
+    background: none;
+    width: 100%;
+    position: absolute;
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid $gray-100;
+    border-bottom: 1px solid $gray-200;
     padding: $p-8 $p-16;
   }
 </style>
