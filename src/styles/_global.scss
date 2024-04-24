@@ -1,23 +1,23 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 // Menubar
 .menubar {
-    .p-menuitem {
-        margin: 0;
-    
-        .p-menuitem-icon {
-            color: var(--gray-700);
-        }
-    
-        .p-menuitem-text {
-            font-size: $fs-14;
-        }
-    }   
+  .p-menuitem {
+    margin: 0;
+
+    .p-menuitem-icon {
+      color: var(--gray-700);
+    }
+
+    .p-menuitem-text {
+      font-size: $fs-14;
+    }
+  }
 }

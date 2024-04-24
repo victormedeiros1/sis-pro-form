@@ -14,12 +14,12 @@
   const items = ref([
     {
       label: 'Início',
-      icon: 'pi pi-home',
+      icon: 'pi pi-home'
     },
     {
       label: 'Projetos',
-      icon: 'pi pi-th-large',
-    },
+      icon: 'pi pi-th-large'
+    }
   ])
 </script>
 
