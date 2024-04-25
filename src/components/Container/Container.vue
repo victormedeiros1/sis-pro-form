@@ -13,5 +13,9 @@
     height: 100vh;
     margin: 0 auto;
     padding: $p-64;
+
+    @media screen and (max-width: $sm) {
+      padding: $p-20;
+    }
   }
 </style>

@@ -36,5 +36,11 @@
     border: 0;
     border-bottom: 1px solid $gray-200;
     padding: $p-8 $p-16;
+
+    &__logo {
+      @media screen and (max-width: $sm) {
+        display: none;
+      }
+    }
   }
 </style>
