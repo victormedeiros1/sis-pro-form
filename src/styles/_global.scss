@@ -24,6 +24,10 @@ p {
 
 // Menubar
 .menubar {
+  .p-menubar-root-list {
+    border: 0;
+  }
+
   .p-menuitem {
     margin: 0;
 

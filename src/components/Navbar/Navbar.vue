@@ -34,8 +34,12 @@
     position: absolute;
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid $gray-200;
     padding: $p-8 $p-16;
+
+    @media screen and (max-width: $sm) {
+      background: $light;
+      border-bottom: 1px solid $gray-200;
+    }
 
     &__logo {
       @media screen and (max-width: $sm) {
