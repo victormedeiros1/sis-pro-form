@@ -1,23 +1,25 @@
 <template>
   <Navbar />
   <Container>
-    <main class="home">
-      <div class="home__left">
-        <h1 class="home__title">SisProForm</h1>
-        <h2 class="home__subtitle">Criação de projetos com mais agilidade</h2>
+    <main class="principal">
+      <div class="principal__esquerda">
+        <h1 class="principal__title">SisProForm</h1>
+        <h2 class="principal__subtitle">
+          Criação de projetos com mais agilidade
+        </h2>
 
         <Button
-          class="home__button"
+          class="principal__button"
           type="button"
           size="small"
           label="CRIAR PROJETO"
         />
       </div>
-      <div class="home__right">
+      <div class="principal__direita">
         <img
-          class="home__logo"
+          class="principal__logo"
           src="@/assets/images/logo400x400.svg"
-          alt="sisproform logo"
+          alt="Logo do SisProForm"
         />
       </div>
     </main>
@@ -31,7 +33,7 @@
 </script>
 
 <style scoped lang="scss">
-  .home {
+  .principal {
     height: 100%;
     display: flex;
     justify-content: space-between;
