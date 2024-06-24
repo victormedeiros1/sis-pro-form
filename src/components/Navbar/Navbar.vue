@@ -9,6 +9,15 @@
         />
       </router-link>
     </template>
+
+    <template #item="{ item }">
+      <router-link :to="item.to">
+        <div class="menubar__item">
+          <i class="menubar__icone" :class="item.icon"></i>
+          <span class="menubar__rotulo">{{ item.label }}</span>
+        </div>
+      </router-link>
+    </template>
   </Menubar>
 </template>
 
@@ -19,19 +28,20 @@
 
   const items = ref([
     {
-      label: 'Início',
-      icon: 'pi pi-home'
-    },
-    {
       label: 'Projetos',
-      icon: 'pi pi-th-large'
+      icon: 'pi pi-th-large',
+      to: '/projetos/criar',
+      key: '1',
+      visible: true
     }
   ])
 </script>
 
 <style scoped lang="scss">
   .menubar {
+    display: flex;
     background: none;
+    gap: $g-12;
     width: 100%;
     position: absolute;
     border-radius: 0;
@@ -47,6 +57,25 @@
       @media screen and (max-width: $sm) {
         display: none;
       }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    &__item {
+      display: flex;
+      padding: $p-8 $p-12;
+    }
+
+    &__icone {
+      color: $gray-700;
+      margin-right: $m-8;
+    }
+
+    &__rotulo {
+      font-size: $fs-14;
+      color: $gray-700;
     }
   }
 </style>
