@@ -8,12 +8,9 @@
           Criação de projetos com mais agilidade
         </h2>
 
-        <Button
-          class="principal__button"
-          type="button"
-          size="small"
-          label="CRIAR PROJETO"
-        />
+        <router-link to="/projetos/criar">
+          <Button class="principal__button" label="CRIAR PROJETO" />
+        </router-link>
       </div>
       <div class="principal__direita">
         <img
