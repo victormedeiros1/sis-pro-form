@@ -1,11 +1,13 @@
 <template>
   <Menubar class="menubar" :model="items">
     <template #start>
-      <img
-        class="menubar__logo"
-        src="@/assets/images/logo30x30.svg"
-        alt="sisproform logo"
-      />
+      <router-link to="/">
+        <img
+          class="menubar__logo"
+          src="@/assets/images/logo30x30.svg"
+          alt="Logo do SisProForm"
+        />
+      </router-link>
     </template>
   </Menubar>
 </template>
