@@ -19,6 +19,9 @@
             rotulo="Pesquisadores(as) responsáveis"
             rotuloBotao="ADICIONAR"
             textoAuxiliar="Nome completo do pesquisador(a)"
+            v-model:listaDeCampos="
+              formularioCriarProjeto.pesquisadoresResponsaveis
+            "
           />
         </div>
       </div>
@@ -28,15 +31,25 @@
 
 <script setup lang="ts">
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
-  import CampoDeLista from '@/components/Campos/CampoDeLista/CampoDeLista.vue'
+  import CampoDeLista from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
+
+  import { ListaDeCampos } from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
+
   import { ref } from 'vue'
 
   interface FormularioCriarProjeto {
     tituloDaPesquisa: string
+    pesquisadoresResponsaveis: ListaDeCampos[]
   }
 
   const formularioCriarProjeto = ref<FormularioCriarProjeto>({
-    tituloDaPesquisa: ''
+    tituloDaPesquisa: '',
+    pesquisadoresResponsaveis: [
+      {
+        id: '',
+        texto: ''
+      }
+    ]
   })
 </script>
 

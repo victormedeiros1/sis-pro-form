@@ -1,15 +1,19 @@
 <template>
-  <div class="campo-de-lista">
-    <label class="campo-de-lista__rotulo" :for="id">{{ rotulo }}</label>
+  <div class="lista-de-campos">
+    <label class="lista-de-campos__rotulo" :for="listaDeCampos[0].id">{{
+      rotulo
+    }}</label>
     <div
-      class="campo-de-lista__grupo"
-      v-for="(campo, index) in campos"
+      class="lista-de-campos__grupo"
+      v-for="(campo, index) in listaDeCampos"
       :key="campo.id"
     >
       <InputText
-        class="campo-de-lista__campo"
+        class="lista-de-campos__campo"
         :id="campo.id"
         :placeholder="textoAuxiliar"
+        @update:model-value="emitirCampos"
+        v-model="campo.texto"
         size="small"
       />
       <Button
@@ -22,7 +26,7 @@
         text
       />
     </div>
-    <div class="campo-de-lista__rodape">
+    <div class="lista-de-campos__rodape">
       <Button
         :label="rotuloBotao"
         icon="pi pi-plus"
@@ -45,34 +49,46 @@
     textoAuxiliar: string
   }
 
-  interface Campos {
+  export interface ListaDeCampos {
     id: string
     texto: string
   }
 
   const props = defineProps<Props>()
 
-  const campos = ref<Campos[]>([
+  const emitir = defineEmits<{
+    (evento: 'update:listaDeCampos', listaDeCampos: ListaDeCampos[]): void
+  }>()
+
+  const listaDeCampos = ref<ListaDeCampos[]>([
     {
       id: `${props.id}-1`,
       texto: ''
     }
   ])
 
+  const emitirCampos = (): void => {
+    emitir('update:listaDeCampos', listaDeCampos.value)
+  }
+
   const adicionarCampo = (): void => {
-    campos.value.push({
-      id: `${props.id}-${campos.value.length + 1}`,
+    listaDeCampos.value.push({
+      id: `${props.id}-${listaDeCampos.value.length + 1}`,
       texto: ''
     })
+
+    emitir('update:listaDeCampos', listaDeCampos.value)
   }
 
   const removerCampo = (id: string): void => {
-    campos.value = campos.value.filter((campo) => campo.id !== id)
+    listaDeCampos.value = listaDeCampos.value.filter((campo) => campo.id !== id)
+
+    emitir('update:listaDeCampos', listaDeCampos.value)
   }
 </script>
 
 <style scoped lang="scss">
-  .campo-de-lista {
+  .lista-de-campos {
     display: flex;
     flex-direction: column;
     gap: $g-8;
