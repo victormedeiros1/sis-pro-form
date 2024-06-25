@@ -6,7 +6,11 @@
       </div>
       <div class="form__corpo">
         <div class="form__grupo">
-          <CampoDeTexto id="titulo-da-pesquisa" rotulo="Título da pesquisa" />
+          <CampoDeTexto
+            id="titulo-da-pesquisa"
+            rotulo="Título da pesquisa"
+            v-model:texto="formCriarProjeto.tituloDaPesquisa"
+          />
         </div>
       </div>
     </div>
@@ -15,6 +19,15 @@
 
 <script setup lang="ts">
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
+  import { ref } from 'vue'
+
+  interface FormCriarProjeto {
+    tituloDaPesquisa: string
+  }
+
+  const formCriarProjeto = ref<FormCriarProjeto>({
+    tituloDaPesquisa: ''
+  })
 </script>
 
 <style scoped lang="scss">
