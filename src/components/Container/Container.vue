@@ -13,6 +13,7 @@
     height: 100vh;
     margin: 0 auto;
     padding: $p-64;
+    padding-top: $p-112;
 
     @media screen and (max-width: $sm) {
       height: 100svh;
