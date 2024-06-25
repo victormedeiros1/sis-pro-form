@@ -10,6 +10,7 @@
         class="campo-de-lista__campo"
         :id="campo.id"
         :placeholder="textoAuxiliar"
+        size="small"
       />
       <Button
         v-if="index !== 0"
@@ -17,6 +18,7 @@
         aria-label="Remover campo"
         icon="pi pi-trash"
         severity="danger"
+        size="small"
         text
       />
     </div>
@@ -25,7 +27,7 @@
         :label="rotuloBotao"
         icon="pi pi-plus"
         @click="adicionarCampo"
-        small
+        size="small"
       />
     </div>
   </div>

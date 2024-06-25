@@ -5,8 +5,9 @@
       class="campo-de-texto__campo"
       :id="id"
       :label="rotulo"
-      v-model="texto"
       @update:model-value="emitirTexto"
+      v-model="texto"
+      size="small"
     />
   </div>
 </template>
