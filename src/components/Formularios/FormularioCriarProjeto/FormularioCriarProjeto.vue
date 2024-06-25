@@ -12,6 +12,15 @@
             v-model:texto="formularioCriarProjeto.tituloDaPesquisa"
           />
         </div>
+
+        <div class="formulario__grupo">
+          <CampoDeLista
+            id="pesquisadores-responsaveis"
+            rotulo="Pesquisadores(as) responsáveis"
+            rotuloBotao="ADICIONAR"
+            textoAuxiliar="Nome completo do pesquisador(a)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -19,6 +28,7 @@
 
 <script setup lang="ts">
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
+  import CampoDeLista from '@/components/Campos/CampoDeLista/CampoDeLista.vue'
   import { ref } from 'vue'
 
   interface FormularioCriarProjeto {
@@ -35,6 +45,12 @@
     .formulario {
       &__cabecalho {
         margin-bottom: $m-16;
+      }
+
+      &__corpo {
+        display: flex;
+        flex-direction: column;
+        gap: $g-16;
       }
     }
   }
