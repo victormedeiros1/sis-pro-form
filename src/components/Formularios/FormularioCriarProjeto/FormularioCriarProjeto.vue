@@ -1,15 +1,15 @@
 <template>
   <div class="criar-projeto">
-    <div class="form">
-      <div class="form__cabecalho">
+    <div class="formulario">
+      <div class="formulario__cabecalho">
         <h1>Dados gerais do projeto</h1>
       </div>
-      <div class="form__corpo">
-        <div class="form__grupo">
+      <div class="formulario__corpo">
+        <div class="formulario__grupo">
           <CampoDeTexto
             id="titulo-da-pesquisa"
             rotulo="Título da pesquisa"
-            v-model:texto="formCriarProjeto.tituloDaPesquisa"
+            v-model:texto="formularioCriarProjeto.tituloDaPesquisa"
           />
         </div>
       </div>
@@ -21,18 +21,18 @@
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
   import { ref } from 'vue'
 
-  interface FormCriarProjeto {
+  interface FormularioCriarProjeto {
     tituloDaPesquisa: string
   }
 
-  const formCriarProjeto = ref<FormCriarProjeto>({
+  const formularioCriarProjeto = ref<FormularioCriarProjeto>({
     tituloDaPesquisa: ''
   })
 </script>
 
 <style scoped lang="scss">
   .criar-projeto {
-    .form {
+    .formulario {
       &__cabecalho {
         margin-bottom: $m-16;
       }
