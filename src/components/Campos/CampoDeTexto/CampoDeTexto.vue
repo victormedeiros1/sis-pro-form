@@ -35,6 +35,7 @@
 
 <style scoped lang="scss">
   .campo-de-texto {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: $g-8;
