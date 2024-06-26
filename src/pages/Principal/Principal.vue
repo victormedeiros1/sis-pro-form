@@ -36,7 +36,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: $sm) {
+    @media (width <= $sm) {
       flex-direction: column-reverse;
       justify-content: center;
       text-align: center;
@@ -46,7 +46,7 @@
       font-size: $fs-64;
       font-weight: 700;
 
-      @media screen and (max-width: $sm) {
+      @media (width <= $sm) {
         font-size: $fs-48;
       }
     }
@@ -56,7 +56,7 @@
       font-weight: 400;
       margin-bottom: $m-28;
 
-      @media screen and (max-width: $sm) {
+      @media (width <= $sm) {
         font-size: $fs-14;
       }
     }
@@ -67,7 +67,7 @@
       border-radius: 100px;
       padding: $p-16 $p-32;
 
-      @media screen and (max-width: $sm) {
+      @media (width <= $sm) {
         font-size: $fs-14;
         padding: $p-12 $p-16;
       }
@@ -77,7 +77,7 @@
       width: 100%;
       max-width: 400px;
 
-      @media screen and (max-width: $sm) {
+      @media (width <= $sm) {
         max-width: 200px;
       }
     }
