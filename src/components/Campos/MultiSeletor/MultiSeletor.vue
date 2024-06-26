@@ -4,9 +4,11 @@
     <MultiSelect
       class="multi-seletor__seletor"
       :options="opcoes"
+      @update:modelValue="emitirOpcoesSelecionadas"
       v-model="opcoesSelecionadas"
       optionLabel="nome"
       filter
+      placeholder="Selecione os tipos da sua pesquisa"
     />
   </div>
 </template>
@@ -14,7 +16,7 @@
 <script setup lang="ts">
   import MultiSelect from 'primevue/multiselect'
 
-  import { ref } from 'vue'
+  import { nextTick, ref } from 'vue'
 
   export interface Opcoes {
     id: string
@@ -30,7 +32,17 @@
 
   defineProps<Props>()
 
+  const emitir = defineEmits<{
+    (evento: 'update:opcoesSelecionadas', opcoesSelecionadas: Opcoes[]): void
+  }>()
+
   const opcoesSelecionadas = ref<Opcoes[]>([])
+
+  const emitirOpcoesSelecionadas = (): void => {
+    nextTick(() => {
+      emitir('update:opcoesSelecionadas', opcoesSelecionadas.value)
+    })
+  }
 </script>
 
 <style scoped lang="scss">

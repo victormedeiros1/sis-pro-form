@@ -15,7 +15,7 @@
             id="tipos-da-pesquisa"
             rotulo="Tipos da pesquisa"
             :opcoes="opcoesTiposDaPesquisa"
-            v-model:opcoesSelecionadas="tiposDaPesquisaSelecionados"
+            v-model:opcoesSelecionadas="formularioCriarProjeto.tiposDaPesquisa"
           />
         </div>
 
@@ -48,6 +48,7 @@
   interface FormularioCriarProjeto {
     tituloDaPesquisa: string
     pesquisadoresResponsaveis: ListaDeCampos[]
+    tiposDaPesquisa: Opcoes[]
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -61,16 +62,10 @@
     }
   ])
 
-  const tiposDaPesquisaSelecionados = ref<Opcoes[]>([])
-
   const formularioCriarProjeto = ref<FormularioCriarProjeto>({
     tituloDaPesquisa: '',
-    pesquisadoresResponsaveis: [
-      {
-        id: '',
-        texto: ''
-      }
-    ]
+    pesquisadoresResponsaveis: [],
+    tiposDaPesquisa: []
   })
 </script>
 
