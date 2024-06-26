@@ -18,6 +18,7 @@
     @media screen and (max-width: $sm) {
       height: 100svh;
       padding: $p-20;
+      padding-top: $p-96;
     }
   }
 </style>
