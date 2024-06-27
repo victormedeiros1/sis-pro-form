@@ -30,12 +30,21 @@
             "
           />
         </div>
+
+        <div class="formulario__grupo">
+          <AreaDeTexto
+            id="objetivo-da-pesquisa"
+            rotulo="Objetivo da pesquisa"
+            v-model:texto="formularioCriarProjeto.objetivoDaPesquisa"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import AreaDeTexto from '@/components/Campos/AreaDeTexto/AreaDeTexto.vue'
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
   import CampoDeLista from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
   import MultiSeletor from '@/components/Campos/MultiSeletor/MultiSeletor.vue'
@@ -49,6 +58,7 @@
     tituloDaPesquisa: string
     pesquisadoresResponsaveis: ListaDeCampos[]
     tiposDaPesquisa: Opcoes[]
+    objetivoDaPesquisa: string
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -65,7 +75,8 @@
   const formularioCriarProjeto = ref<FormularioCriarProjeto>({
     tituloDaPesquisa: '',
     pesquisadoresResponsaveis: [],
-    tiposDaPesquisa: []
+    tiposDaPesquisa: [],
+    objetivoDaPesquisa: ''
   })
 </script>
 
