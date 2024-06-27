@@ -47,3 +47,23 @@ p {
     padding: 0.4375rem 0.6563rem; // 7px 10.5px
   }
 }
+
+.p-multiselect-panel {
+  .p-multiselect-header {
+    .p-multiselect-filter {
+      font-size: $fs-14;
+      padding: 0.4375rem 0.6563rem; // 7px 10.5px
+      padding-right: $p-32;
+    }
+  }
+
+  .p-multiselect-items-wrapper {
+    .p-multiselect-empty-message {
+      font-size: $fs-14;
+    }
+
+    .p-multiselect-item {
+      font-size: $fs-14;
+    }
+  }
+}
