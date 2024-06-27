@@ -22,6 +22,30 @@
 
         <div class="formulario__grupo">
           <CampoDeLista
+            id="orientadores-responsaveis"
+            rotulo="Orientadores(as) responsáveis"
+            rotuloBotao="ADICIONAR"
+            textoAuxiliar="Nome completo do orientador(a)"
+            v-model:listaDeCampos="
+              formularioCriarProjeto.orientadoresResponsaveis
+            "
+          />
+        </div>
+
+        <div class="formulario__grupo">
+          <CampoDeLista
+            id="orientadores-responsaveis"
+            rotulo="Orientadores(as) responsáveis"
+            rotuloBotao="ADICIONAR"
+            textoAuxiliar="Nome completo do orientador(a)"
+            v-model:listaDeCampos="
+              formularioCriarProjeto.orientandosResponsaveis
+            "
+          />
+        </div>
+
+        <div class="formulario__grupo">
+          <CampoDeLista
             id="pesquisadores-responsaveis"
             rotulo="Pesquisadores(as) responsáveis"
             rotuloBotao="ADICIONAR"
@@ -105,6 +129,8 @@
 
   interface FormularioCriarProjeto {
     tituloDaPesquisa: string
+    orientadoresResponsaveis: ListaDeCampos[]
+    orientandosResponsaveis: ListaDeCampos[]
     pesquisadoresResponsaveis: ListaDeCampos[]
     tiposDaPesquisa: Opcoes[]
     objetivoDaPesquisa: string
@@ -141,6 +167,8 @@
 
   const formularioCriarProjeto = ref<FormularioCriarProjeto>({
     tituloDaPesquisa: '',
+    orientadoresResponsaveis: [],
+    orientandosResponsaveis: [],
     pesquisadoresResponsaveis: [],
     tiposDaPesquisa: [],
     objetivoDaPesquisa: '',
