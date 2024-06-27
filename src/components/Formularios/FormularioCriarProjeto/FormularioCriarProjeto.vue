@@ -9,6 +9,7 @@
           <CampoDeTexto
             id="titulo-da-pesquisa"
             rotulo="Título da pesquisa"
+            texto-auxiliar="Ex: Estudo sobre a COVID-19"
             v-model:texto="formularioCriarProjeto.tituloDaPesquisa"
           />
           <MultiSeletor
@@ -35,6 +36,7 @@
           <AreaDeTexto
             id="objetivo-da-pesquisa"
             rotulo="Objetivo da pesquisa"
+            texto-auxiliar="Descreva o objetivo da pesquisa de forma clara e objetiva"
             v-model:texto="formularioCriarProjeto.objetivoDaPesquisa"
           />
         </div>
