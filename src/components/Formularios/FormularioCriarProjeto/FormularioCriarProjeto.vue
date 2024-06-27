@@ -73,7 +73,15 @@
             v-model:texto="formularioCriarProjeto.inserirNomeDoCep"
           />
         </div>
-        <pre>{{ formularioCriarProjeto }}</pre>
+
+        <div class="formulario__grupo">
+          <AreaDeTexto
+            id="metologia-que-ira-utilizar"
+            rotulo="Metodologia que irá utilizar"
+            texto-auxiliar="Descreva a metodologia que será utilizada em um resumo conciso"
+            v-model:texto="formularioCriarProjeto.metodologiaQueIraUtilizar"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -102,6 +110,7 @@
     suaPesquisaEnvolveDadosDoSUS: string
     cnpjDaInstituicao: string
     inserirNomeDoCep: string
+    metodologiaQueIraUtilizar: string
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -136,7 +145,8 @@
     quaisEtapasSeraoRealizadas: '',
     suaPesquisaEnvolveDadosDoSUS: '',
     cnpjDaInstituicao: '',
-    inserirNomeDoCep: ''
+    inserirNomeDoCep: '',
+    metodologiaQueIraUtilizar: ''
   })
 </script>
 
