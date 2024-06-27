@@ -25,7 +25,7 @@
             id="orientadores-responsaveis"
             rotulo="Orientadores(as) responsáveis"
             rotuloBotao="ADICIONAR"
-            textoAuxiliar="Nome completo do orientador(a)"
+            textoAuxiliar="Nome completo do orientador(a) responsável"
             v-model:listaDeCampos="
               formularioCriarProjeto.orientadoresResponsaveis
             "
@@ -34,10 +34,10 @@
 
         <div class="formulario__grupo">
           <CampoDeLista
-            id="orientadores-responsaveis"
-            rotulo="Orientadores(as) responsáveis"
+            id="orientandos-responsaveis"
+            rotulo="Orientandos(as) responsáveis"
             rotuloBotao="ADICIONAR"
-            textoAuxiliar="Nome completo do orientador(a)"
+            textoAuxiliar="Nome completo do orientando(a) responsável"
             v-model:listaDeCampos="
               formularioCriarProjeto.orientandosResponsaveis
             "
@@ -49,7 +49,7 @@
             id="pesquisadores-responsaveis"
             rotulo="Pesquisadores(as) responsáveis"
             rotuloBotao="ADICIONAR"
-            textoAuxiliar="Nome completo do pesquisador(a)"
+            textoAuxiliar="Nome completo do pesquisador(a) responsável"
             v-model:listaDeCampos="
               formularioCriarProjeto.pesquisadoresResponsaveis
             "
