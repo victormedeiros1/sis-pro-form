@@ -47,6 +47,18 @@
             v-model:texto="formularioCriarProjeto.quaisEtapasSeraoRealizadas"
           />
         </div>
+
+        <div class="formulario__grupo formulario__grupo--2-colunas">
+          <SelecaoUnica
+            id="sua-pesquisa-envolve-dados-do-sus"
+            rotulo="Sua pesquisa envolve dados do SUS?"
+            :opcoes="opcoesSuaPesquisaEnvolveDadosDoSUS"
+            v-model:opcaoSelecionada="
+              formularioCriarProjeto.quaisEtapasSeraoRealizadas
+            "
+          />
+        </div>
+        <pre>{{ formularioCriarProjeto }}</pre>
       </div>
     </div>
   </div>
@@ -54,12 +66,15 @@
 
 <script setup lang="ts">
   import AreaDeTexto from '@/components/Campos/AreaDeTexto/AreaDeTexto.vue'
-  import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
   import CampoDeLista from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
+  import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
   import MultiSeletor from '@/components/Campos/MultiSeletor/MultiSeletor.vue'
+  import SelecaoUnica from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
 
+  import { OpcoesSelecaoUnica } from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
   import { ListaDeCampos } from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
-  import { Opcoes } from '@/components/Campos/MultiSeletor/MultiSeletor.vue'
+
+  import { Opcoes } from '@/types/gerais'
 
   import { ref } from 'vue'
 
@@ -69,6 +84,7 @@
     tiposDaPesquisa: Opcoes[]
     objetivoDaPesquisa: string
     quaisEtapasSeraoRealizadas: string
+    suaPesquisaEnvolveDadosDoSUS: string
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -82,12 +98,26 @@
     }
   ])
 
+  const opcoesSuaPesquisaEnvolveDadosDoSUS = ref<OpcoesSelecaoUnica[]>([
+    {
+      id: 'sim',
+      rotulo: 'Sim',
+      valor: 'sim'
+    },
+    {
+      id: 'nao',
+      rotulo: 'Não',
+      valor: 'nao'
+    }
+  ])
+
   const formularioCriarProjeto = ref<FormularioCriarProjeto>({
     tituloDaPesquisa: '',
     pesquisadoresResponsaveis: [],
     tiposDaPesquisa: [],
     objetivoDaPesquisa: '',
-    quaisEtapasSeraoRealizadas: ''
+    quaisEtapasSeraoRealizadas: '',
+    suaPesquisaEnvolveDadosDoSUS: ''
   })
 </script>
 
