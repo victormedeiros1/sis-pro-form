@@ -5,6 +5,7 @@
       class="campo-de-texto__campo"
       :id="id"
       :label="rotulo"
+      :placeholder="textoAuxiliar"
       @update:model-value="emitirTexto"
       v-model="texto"
       size="small"
@@ -18,6 +19,7 @@
   interface Props {
     id: string
     rotulo: string
+    textoAuxiliar?: string
   }
 
   defineProps<Props>()

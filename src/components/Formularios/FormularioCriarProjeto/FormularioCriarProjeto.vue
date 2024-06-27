@@ -38,6 +38,15 @@
             v-model:texto="formularioCriarProjeto.objetivoDaPesquisa"
           />
         </div>
+
+        <div class="formulario__grupo formulario__grupo--2-colunas">
+          <CampoDeTexto
+            id="quais-etapas-serao-realizadas"
+            rotulo="Quais etapas serão realizadas?"
+            texto-auxiliar="Ex: Coleta de dados, Análise dos dados, etc."
+            v-model:texto="formularioCriarProjeto.quaisEtapasSeraoRealizadas"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -59,6 +68,7 @@
     pesquisadoresResponsaveis: ListaDeCampos[]
     tiposDaPesquisa: Opcoes[]
     objetivoDaPesquisa: string
+    quaisEtapasSeraoRealizadas: string
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -76,7 +86,8 @@
     tituloDaPesquisa: '',
     pesquisadoresResponsaveis: [],
     tiposDaPesquisa: [],
-    objetivoDaPesquisa: ''
+    objetivoDaPesquisa: '',
+    quaisEtapasSeraoRealizadas: ''
   })
 </script>
 
