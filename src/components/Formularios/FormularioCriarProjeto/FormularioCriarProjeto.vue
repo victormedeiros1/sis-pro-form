@@ -58,6 +58,22 @@
             "
           />
         </div>
+
+        <div class="formulario__grupo formulario__grupo--2-colunas">
+          <CampoDeTexto
+            id="cnpj-da-instituicao"
+            rotulo="CNPJ da Instituição"
+            texto-auxiliar="Ex: 00.000.000/0000-00"
+            v-model:texto="formularioCriarProjeto.cnpjDaInstituicao"
+          />
+          <CampoDeTexto
+            id="inserir-nome-do-cep"
+            rotulo="Inserir nome do CEP"
+            texto-auxiliar="Ex: Rio Grande do Norte"
+            v-model:texto="formularioCriarProjeto.inserirNomeDoCep"
+          />
+        </div>
+        <pre>{{ formularioCriarProjeto }}</pre>
       </div>
     </div>
   </div>
@@ -84,6 +100,8 @@
     objetivoDaPesquisa: string
     quaisEtapasSeraoRealizadas: string
     suaPesquisaEnvolveDadosDoSUS: string
+    cnpjDaInstituicao: string
+    inserirNomeDoCep: string
   }
 
   const opcoesTiposDaPesquisa = ref<Opcoes[]>([
@@ -116,7 +134,9 @@
     tiposDaPesquisa: [],
     objetivoDaPesquisa: '',
     quaisEtapasSeraoRealizadas: '',
-    suaPesquisaEnvolveDadosDoSUS: ''
+    suaPesquisaEnvolveDadosDoSUS: '',
+    cnpjDaInstituicao: '',
+    inserirNomeDoCep: ''
   })
 </script>
 
