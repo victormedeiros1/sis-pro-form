@@ -108,6 +108,33 @@
             v-model:texto="formularioCriarProjeto.metodologiaQueIraUtilizar"
           />
         </div>
+
+        <div class="formularios">
+          <span class="formularios__titulo"
+            >De acordo com os dados fornecidos a respeito do projeto, esses
+            serão os formulários que você deverá preencher</span
+          >
+          <ul class="formularios__lista">
+            <li class="formularios__nome">
+              Declaração de Compromisso Ético de Não Início da Pesquisa
+            </li>
+            <li class="formularios__nome">Termo de confidencialidade</li>
+            <li class="formularios__nome">
+              Folha de identificação do pesquisador
+            </li>
+            <li class="formularios__nome">
+              Petição para Dispensa de TCLE ou RCLE
+            </li>
+            <li class="formularios__nome">
+              Termo de autorização para gravação de voz e ou Registro de Imagens
+              (fotos e ou vídeos)
+            </li>
+          </ul>
+        </div>
+
+        <div class="formulario__rodape">
+          <Button class="formulario__enviar" label="PRÓXIMO" size="small" />
+        </div>
       </div>
     </div>
   </div>
@@ -119,6 +146,8 @@
   import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
   import MultiSeletor from '@/components/Campos/MultiSeletor/MultiSeletor.vue'
   import SelecaoUnica from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
+
+  import Button from 'primevue/button'
 
   import { OpcoesSelecaoUnica } from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
   import { ListaDeCampos } from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
@@ -198,6 +227,27 @@
         display: flex;
         flex-direction: column;
         gap: $g-16;
+      }
+    }
+
+    .formularios {
+      display: flex;
+      flex-direction: column;
+      gap: $g-8;
+
+      &__titulo {
+        font-size: $fs-14;
+      }
+
+      &__lista {
+        display: flex;
+        flex-direction: column;
+        gap: $g-4;
+        margin: 0;
+      }
+
+      &__nome {
+        font-size: $fs-14;
       }
     }
   }
