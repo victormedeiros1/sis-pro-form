@@ -16,12 +16,9 @@
 <script setup lang="ts">
   import MultiSelect from 'primevue/multiselect'
 
-  import { nextTick, ref } from 'vue'
+  import { Opcoes } from '@/types/gerais'
 
-  export interface Opcoes {
-    id: string
-    nome: string
-  }
+  import { nextTick, ref } from 'vue'
 
   interface Props {
     id: string
