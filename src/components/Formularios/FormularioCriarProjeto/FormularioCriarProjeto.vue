@@ -65,7 +65,7 @@
           />
         </div>
 
-        <div class="formulario__grupo formulario__grupo--2-colunas">
+        <div class="formulario__grupo">
           <CampoDeTexto
             id="quais-etapas-serao-realizadas"
             rotulo="Quais etapas serão realizadas?"
@@ -74,7 +74,7 @@
           />
         </div>
 
-        <div class="formulario__grupo formulario__grupo--2-colunas">
+        <div class="formulario__grupo">
           <SelecaoUnica
             id="sua-pesquisa-envolve-dados-do-sus"
             rotulo="Sua pesquisa envolve dados do SUS?"
@@ -109,6 +109,7 @@
           />
         </div>
 
+        <!-- // TODO: lógica dos formulários que o usuário deverá preencher -->
         <div class="formularios">
           <span class="formularios__titulo"
             >De acordo com os dados fornecidos a respeito do projeto, esses
