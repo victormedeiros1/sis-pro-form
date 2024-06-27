@@ -54,11 +54,10 @@
             rotulo="Sua pesquisa envolve dados do SUS?"
             :opcoes="opcoesSuaPesquisaEnvolveDadosDoSUS"
             v-model:opcaoSelecionada="
-              formularioCriarProjeto.quaisEtapasSeraoRealizadas
+              formularioCriarProjeto.suaPesquisaEnvolveDadosDoSUS
             "
           />
         </div>
-        <pre>{{ formularioCriarProjeto }}</pre>
       </div>
     </div>
   </div>
