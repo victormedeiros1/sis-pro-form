@@ -17,7 +17,7 @@
 <script setup lang="ts">
   import Textarea from 'primevue/textarea'
 
-  import { ref } from 'vue'
+  import { nextTick, ref } from 'vue'
 
   interface Props {
     id: string
@@ -33,7 +33,9 @@
   const texto = ref('')
 
   const emitirTexto = (): void => {
-    emitir('update:texto', texto.value)
+    nextTick(() => {
+      emitir('update:texto', texto.value)
+    })
   }
 </script>
 
