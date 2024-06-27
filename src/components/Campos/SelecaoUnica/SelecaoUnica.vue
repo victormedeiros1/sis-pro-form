@@ -1,12 +1,17 @@
 <template>
   <div class="selecao-unica">
-    <label class="selecao-unica__rotulo" :for="id">{{ rotulo }}</label>
+    <span class="selecao-unica__rotulo" :id="id">{{ rotulo }}</span>
 
     <div class="selecao-unica__campos">
-      <div class="selecao-unica__grupo" v-for="opcao in opcoes" :key="opcao.id">
+      <div
+        class="selecao-unica__grupo"
+        :id="id"
+        v-for="opcao in opcoes"
+        :key="opcao.id"
+      >
         <RadioButton
           class="selecao-unica__caixa"
-          :id="opcao.id"
+          :input-id="opcao.id"
           :value="opcao.valor"
           @update:model-value="emitirOpcaoSelecionada"
           v-model="opcaoSelecionada"
@@ -75,6 +80,7 @@
     }
 
     &__rotulo {
+      cursor: default;
       color: $dark;
       font-weight: medium;
       font-size: $fs-14;

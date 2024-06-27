@@ -3,6 +3,7 @@
     <label class="multi-seletor__rotulo" :for="id">{{ rotulo }}</label>
     <MultiSelect
       class="multi-seletor__seletor"
+      :inputId="id"
       :options="opcoes"
       @update:modelValue="emitirOpcoesSelecionadas"
       v-model="opcoesSelecionadas"
