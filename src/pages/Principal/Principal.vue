@@ -31,7 +31,7 @@
 
 <style scoped lang="scss">
   .principal {
-    height: 100%;
+    height: calc(100vh - $p-224);
     display: flex;
     justify-content: space-between;
     align-items: center;
