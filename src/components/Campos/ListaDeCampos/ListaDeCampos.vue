@@ -1,6 +1,6 @@
 <template>
   <div class="lista-de-campos">
-    <label class="lista-de-campos__rotulo" :for="listaDeCampos[0].id">{{
+    <label class="rotulo lista-de-campos__rotulo" :for="listaDeCampos[0].id">{{
       rotulo
     }}</label>
     <div

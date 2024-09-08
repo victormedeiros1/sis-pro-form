@@ -1,6 +1,8 @@
 <template>
   <div class="selecao-unica">
-    <span class="selecao-unica__rotulo" :id="`${id}-rotulo`">{{ rotulo }}</span>
+    <span class="rotulo selecao-unica__rotulo" :id="`${id}-rotulo`">{{
+      rotulo
+    }}</span>
 
     <div class="selecao-unica__campos">
       <div class="selecao-unica__grupo" v-for="opcao in opcoes" :key="opcao.id">
@@ -12,7 +14,7 @@
           v-model="opcaoSelecionada"
           name="opcao"
         />
-        <label class="selecao-unica__rotulo-opcao" :for="opcao.id">{{
+        <label class="rotulo selecao-unica__rotulo-opcao" :for="opcao.id">{{
           opcao.rotulo
         }}</label>
       </div>
@@ -73,11 +75,6 @@
       cursor: pointer;
       display: flex;
       gap: $g-8;
-    }
-
-    &__rotulo {
-      font-size: $fs-14;
-      font-weight: 500;
     }
 
     &__rotulo-opcao {

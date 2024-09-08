@@ -111,7 +111,7 @@
 
         <!-- // TODO: lógica dos formulários que o usuário deverá preencher -->
         <div class="formularios">
-          <span class="formularios__titulo"
+          <span class="rotulo formularios__titulo"
             >De acordo com os dados fornecidos a respeito do projeto, esses
             serão os formulários que você deverá preencher</span
           >
@@ -236,10 +236,6 @@
       flex-direction: column;
       gap: $g-8;
 
-      &__titulo {
-        font-size: $fs-14;
-      }
-
       &__lista {
         display: flex;
         flex-direction: column;
@@ -248,6 +244,7 @@
       }
 
       &__nome {
+        color: $gray;
         font-size: $fs-14;
       }
     }
