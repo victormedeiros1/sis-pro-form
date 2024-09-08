@@ -2,7 +2,7 @@
   <div class="campo-de-texto">
     <label class="campo-de-texto__rotulo" :for="id">{{ rotulo }}</label>
     <InputText
-      class="campo-de-texto__campo"
+      class="campo campo-de-texto__campo"
       :id="id"
       :label="rotulo"
       :placeholder="textoAuxiliar"

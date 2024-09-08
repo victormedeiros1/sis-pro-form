@@ -2,7 +2,7 @@
   <div class="area-de-texto">
     <label class="area-de-texto__rotulo" :for="id">{{ rotulo }}</label>
     <Textarea
-      class="area-de-texto__campo"
+      class="campo area-de-texto__campo"
       :id="id"
       :label="rotulo"
       :placeholder="textoAuxiliar"
@@ -46,10 +46,5 @@
     display: flex;
     flex-direction: column;
     gap: $g-8;
-
-    &__campo {
-      width: 100%;
-      font-size: $fs-14;
-    }
   }
 </style>

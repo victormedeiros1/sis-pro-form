@@ -9,7 +9,7 @@
       :key="campo.id"
     >
       <InputText
-        class="lista-de-campos__campo"
+        class="campo lista-de-campos__campo"
         :id="campo.id"
         :placeholder="textoAuxiliar"
         @update:model-value="emitirCampos"
@@ -97,11 +97,6 @@
       width: 100%;
       display: flex;
       gap: $g-8;
-    }
-
-    &__campo {
-      width: 100%;
-      // font-size: $fs-14;
     }
   }
 </style>
