@@ -1,8 +1,8 @@
 <template>
   <div class="area-de-texto">
-    <label class="rotulo area-de-texto__rotulo" :for="id">{{ rotulo }}</label>
+    <label class="area-de-texto__rotulo rotulo" :for="id">{{ rotulo }}</label>
     <Textarea
-      class="campo area-de-texto__campo"
+      class="area-de-texto__campo campo"
       :id="id"
       :label="rotulo"
       :placeholder="textoAuxiliar"

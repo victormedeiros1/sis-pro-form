@@ -1,6 +1,6 @@
 <template>
   <div class="selecao-unica">
-    <span class="rotulo selecao-unica__rotulo" :id="`${id}-rotulo`">{{
+    <span class="selecao-unica__rotulo rotulo" :id="`${id}-rotulo`">{{
       rotulo
     }}</span>
 

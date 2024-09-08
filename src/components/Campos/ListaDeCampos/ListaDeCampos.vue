@@ -1,6 +1,6 @@
 <template>
   <div class="lista-de-campos">
-    <label class="rotulo lista-de-campos__rotulo" :for="listaDeCampos[0].id">{{
+    <label class="lista-de-campos__rotulo rotulo" :for="listaDeCampos[0].id">{{
       rotulo
     }}</label>
     <div
@@ -9,7 +9,7 @@
       :key="campo.id"
     >
       <InputText
-        class="campo lista-de-campos__campo"
+        class="lista-de-campos__campo campo"
         :id="campo.id"
         :placeholder="textoAuxiliar"
         @update:model-value="emitirCampos"

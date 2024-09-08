@@ -1,6 +1,6 @@
 <template>
   <div class="multi-seletor">
-    <label class="rotulo multi-seletor__rotulo" :for="id">{{ rotulo }}</label>
+    <label class="multi-seletor__rotulo rotulo" :for="id">{{ rotulo }}</label>
     <MultiSelect
       class="multi-seletor__seletor"
       :inputId="id"
