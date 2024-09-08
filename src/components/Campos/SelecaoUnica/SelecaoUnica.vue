@@ -1,6 +1,6 @@
 <template>
   <div class="selecao-unica">
-    <span class="selecao-unica__rotulo" :id="id">{{ rotulo }}</span>
+    <label class="selecao-unica__rotulo" :id="id">{{ rotulo }}</label>
 
     <div class="selecao-unica__campos">
       <div

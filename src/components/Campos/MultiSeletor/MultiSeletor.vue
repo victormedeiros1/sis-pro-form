@@ -50,12 +50,6 @@
     flex-direction: column;
     gap: $g-8;
 
-    &__rotulo {
-      color: $dark;
-      font-weight: medium;
-      font-size: $fs-14;
-    }
-
     &__seletor {
       font-size: $fs-14;
     }

@@ -93,12 +93,6 @@
     flex-direction: column;
     gap: $g-8;
 
-    &__rotulo {
-      color: $dark;
-      font-weight: medium;
-      font-size: $fs-14;
-    }
-
     &__grupo {
       width: 100%;
       display: flex;
@@ -107,6 +101,7 @@
 
     &__campo {
       width: 100%;
+      // font-size: $fs-14;
     }
   }
 </style>
