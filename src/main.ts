@@ -3,7 +3,6 @@ import PrimeVue from 'primevue/config'
 import App from './App.vue'
 import { router } from './router'
 
-import './styles/_global.scss'
 import 'primevue/resources/themes/aura-light-indigo/theme.css'
 import 'primevue/resources/primevue.min.css'
 import 'primeicons/primeicons.css'
