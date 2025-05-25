@@ -1,50 +1,50 @@
 <template>
-  <div class="area-de-texto">
-    <label class="area-de-texto__rotulo rotulo" :for="id">{{ rotulo }}</label>
-    <Textarea
-      class="area-de-texto__campo campo"
-      :id="id"
-      :label="rotulo"
-      :placeholder="textoAuxiliar"
-      @update:model-value="emitirTexto"
-      v-model="texto"
-      size="small"
-      autoResize
-      :rows="4"
-    />
-  </div>
+	<div class="area-de-texto">
+		<label class="area-de-texto__rotulo rotulo" :for="id">{{ rotulo }}</label>
+		<Textarea
+			:id="id"
+			v-model="texto"
+			class="area-de-texto__campo campo"
+			:label="rotulo"
+			:placeholder="textoAuxiliar"
+			size="small"
+			autoResize
+			:rows="4"
+			@update:model-value="emitirTexto"
+		/>
+	</div>
 </template>
 
 <script setup lang="ts">
-  import Textarea from 'primevue/textarea'
+import Textarea from 'primevue/textarea'
 
-  import { nextTick, ref } from 'vue'
+import { nextTick, ref } from 'vue'
 
-  interface Props {
-    id: string
-    rotulo: string
-    textoAuxiliar?: string
-  }
+interface Props {
+	id: string
+	rotulo: string
+	textoAuxiliar?: string
+}
 
-  defineProps<Props>()
+defineProps<Props>()
 
-  const emitir = defineEmits<{
-    (evento: 'update:texto', texto: string): void
-  }>()
+const emitir = defineEmits<{
+	(evento: 'update:texto', texto: string): void
+}>()
 
-  const texto = ref('')
+const texto = ref('')
 
-  const emitirTexto = (): void => {
-    nextTick(() => {
-      emitir('update:texto', texto.value)
-    })
-  }
+const emitirTexto = (): void => {
+	nextTick(() => {
+		emitir('update:texto', texto.value)
+	})
+}
 </script>
 
 <style scoped lang="scss">
-  .area-de-texto {
-    display: flex;
-    flex-direction: column;
-    gap: $g-8;
-  }
+.area-de-texto {
+	display: flex;
+	flex-direction: column;
+	gap: $g-8;
+}
 </style>
