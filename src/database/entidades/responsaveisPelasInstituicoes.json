@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Responsável 1",
+    "cargo": "Reitor",
+    "nomeDaInstituicao": "Universidade XYZ",
+    "cnpjDaInstituicao": "12345678000190"
+  },
+  {
+    "nome": "Responsável 2",
+    "cargo": "Diretor",
+    "nomeDaInstituicao": "Faculdade ABC",
+    "cnpjDaInstituicao": "23456789000101"
+  },
+  {
+    "nome": "Responsável 3",
+    "cargo": "Coordenador",
+    "nomeDaInstituicao": "Escola DEF",
+    "cnpjDaInstituicao": "34567890100102"
+  }
+]

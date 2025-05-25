@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Pesquisador 1",
+    "cpf": "12345678900",
+    "telefone": "11987654321",
+    "email": "pesquisador1@example.com"
+  },
+  {
+    "nome": "Pesquisador 2",
+    "cpf": "23456789001",
+    "telefone": "21976543210",
+    "email": "pesquisador2@example.com"
+  },
+  {
+    "nome": "Pesquisador 3",
+    "cpf": "34567890102",
+    "telefone": "31965432109",
+    "email": "pesquisador3@example.com"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nome": "Formulário de Avaliação de Desempenho",
+    "descricao": "Formulário para avaliação de desempenho dos colaboradores.",
+    "campos": [
+      {
+        "id": 1,
+        "tipo": "texto",
+        "rotulo": "Nome do Colaborador",
+        "obrigatorio": true
+      },
+      {
+        "id": 2,
+        "tipo": "data",
+        "rotulo": "Data da Avaliação",
+        "obrigatorio": true
+      },
+      {
+        "id": 3,
+        "tipo": "texto",
+        "rotulo": "Cargo",
+        "obrigatorio": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Formulário de Feedback de Cliente",
+    "descricao": "Formulário para coleta de feedback dos clientes.",
+    "campos": [
+      {
+        "id": 1,
+        "tipo": "texto",
+        "rotulo": "Nome do Cliente",
+        "obrigatorio": true
+      },
+      {
+        "id": 2,
+        "tipo": "texto",
+        "rotulo": "E-mail",
+        "obrigatorio": true
+      },
+      {
+        "id": 3,
+        "tipo": "texto",
+        "rotulo": "Comentários",
+        "obrigatorio": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Formulário de Solicitação de Recursos",
+    "descricao": "Formulário para solicitação de recursos pela equipe.",
+    "campos": [
+      {
+        "id": 1,
+        "tipo": "texto",
+        "rotulo": "Nome do Solicitante",
+        "obrigatorio": true
+      },
+      {
+        "id": 2,
+        "tipo": "texto",
+        "rotulo": "Descrição do Recurso",
+        "obrigatorio": true
+      },
+      {
+        "id": 3,
+        "tipo": "data",
+        "rotulo": "Data de Necessidade",
+        "obrigatorio": false
+      }
+    ]
+  }
+]
