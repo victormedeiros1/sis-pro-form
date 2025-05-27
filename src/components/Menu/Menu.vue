@@ -19,7 +19,7 @@
 				<div class="secao__titulo">PROJETOS</div>
 				<ul class="secao__menu">
 					<li class="secao__item">
-						<router-link class="secao__link" to="/"
+						<router-link class="secao__link" to="/projetos/abertos"
 							><i class="pi pi-objects-column"></i>Abertos</router-link
 						>
 					</li>

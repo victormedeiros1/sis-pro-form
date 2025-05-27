@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Principal from '@/pages/Principal/Principal.vue'
-import FormularioBase from '@/components/Formularios/FormularioBase.vue'
+import Abertos from '@/pages/Projetos/Abertos.vue'
 
 const routes = [
 	{
@@ -10,9 +10,9 @@ const routes = [
 		component: Principal
 	},
 	{
-		path: '/projetos/criar',
-		name: 'Criar projeto',
-		component: FormularioBase
+		path: '/projetos/abertos',
+		name: 'Projetos abertos',
+		component: Abertos
 	}
 ]
 

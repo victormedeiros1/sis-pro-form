@@ -1,22 +1,3 @@
-/* ===== Menubar ===== */
-.menubar {
-  .p-menubar-root-list {
-    border: 0;
-  }
-
-  .p-menuitem {
-    margin: 0;
-
-    .p-menuitem-icon {
-      color: var(--gray-700);
-    }
-
-    .p-menuitem-text {
-      font-size: var(--fs-14);
-    }
-  }
-}
-
 /* ===== MultiSelect ===== */
 .p-multiselect {
   .p-multiselect-label {
