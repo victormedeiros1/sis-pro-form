@@ -202,38 +202,38 @@ const formularioCriarProjeto = ref<FormularioCriarProjeto>({
 .criar-projeto {
 	.formulario {
 		&__cabecalho {
-			margin-bottom: $m-16;
+			margin-bottom: var(--m-16);
 		}
 
 		&__grupo {
 			&--2-colunas {
 				display: flex;
-				gap: $g-16;
+				gap: var(--g-16);
 			}
 		}
 
 		&__corpo {
 			display: flex;
 			flex-direction: column;
-			gap: $g-16;
+			gap: var(--g-16);
 		}
 	}
 
 	.formularios {
 		display: flex;
 		flex-direction: column;
-		gap: $g-8;
+		gap: var(--g-8);
 
 		&__lista {
 			display: flex;
 			flex-direction: column;
-			gap: $g-4;
+			gap: var(--g-4);
 			margin: 0;
 		}
 
 		&__nome {
-			color: $gray;
-			font-size: $fs-14;
+			color: var(--gray);
+			font-size: var(--fs-14);
 		}
 	}
 }

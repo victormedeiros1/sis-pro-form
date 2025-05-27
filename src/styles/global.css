@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('@/assets/images/background1920x1080.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Formulários ===== */
+label.rotulo,
+span.rotulo {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: var(--fs-14);
+}
+
+input.campo,
+textarea.campo {
+  width: 100%;
+  font-size: var(--fs-14);
+}

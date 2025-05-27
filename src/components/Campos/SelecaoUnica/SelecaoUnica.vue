@@ -61,18 +61,18 @@ onMounted(() => {
 .selecao-unica {
 	display: flex;
 	flex-direction: column;
-	gap: $g-8;
+	gap: var(--g-8);
 
 	&__campos {
 		display: flex;
 		flex-direction: row;
-		gap: $g-16;
+		gap: var(--g-16);
 	}
 
 	&__grupo {
 		cursor: pointer;
 		display: flex;
-		gap: $g-8;
+		gap: var(--g-8);
 	}
 
 	&__rotulo-opcao {

@@ -42,6 +42,6 @@ const emitirTexto = (): void => {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	gap: $g-8;
+	gap: var(--g-8);
 }
 </style>

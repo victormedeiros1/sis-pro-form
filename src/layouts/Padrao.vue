@@ -19,6 +19,6 @@ import Menu from '@/components/Menu/Menu.vue'
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding: $p-64 $p-100;
+	padding: var(--p-64) var(--p-100);
 }
 </style>

@@ -91,12 +91,12 @@ const removerCampo = (id: string): void => {
 .lista-de-campos {
 	display: flex;
 	flex-direction: column;
-	gap: $g-8;
+	gap: var(--g-8);
 
 	&__grupo {
 		width: 100%;
 		display: flex;
-		gap: $g-8;
+		gap: var(--g-8);
 	}
 }
 </style>

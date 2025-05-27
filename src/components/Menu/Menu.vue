@@ -31,11 +31,11 @@ import Sidebar from 'primevue/sidebar'
 	&__header {
 		display: flex;
 		align-items: center;
-		gap: $g-8;
+		gap: var(--g-8);
 	}
 
 	&__title {
-		font-size: $fs-14;
+		font-size: var(--fs-14);
 		font-weight: 700;
 	}
 }
