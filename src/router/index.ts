@@ -1,7 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Principal from '@/pages/Principal/Principal.vue'
-import Abertos from '@/pages/Projetos/Abertos.vue'
+import Atuais from '@/pages/Projetos/Atuais.vue'
+import Encerrados from '@/pages/Projetos/Encerrados.vue'
+import Pesquisadores from '@/pages/Pesquisadores/Pesquisadores.vue'
+import Orientadores from '@/pages/Orientadores/Orientadores.vue'
+import Orientandos from '@/pages/Orientandos/Orientandos.vue'
+import Instituicoes from '@/pages/Instituicoes/Instituicoes.vue'
 
 const routes = [
 	{
@@ -10,9 +15,34 @@ const routes = [
 		component: Principal
 	},
 	{
-		path: '/projetos/abertos',
-		name: 'Projetos abertos',
-		component: Abertos
+		path: '/projetos/atuais',
+		name: 'Projetos atuais',
+		component: Atuais
+	},
+	{
+		path: '/projetos/encerrados',
+		name: 'Projetos encerrados',
+		component: Encerrados
+	},
+	{
+		path: '/pesquisadores',
+		name: 'Pesquisadores',
+		component: Pesquisadores
+	},
+	{
+		path: '/orientadores',
+		name: 'Orientadores',
+		component: () => Orientadores
+	},
+	{
+		path: '/orientandos',
+		name: 'Orientandos',
+		component: () => Orientandos
+	},
+	{
+		path: '/instituicoes',
+		name: 'Instituições',
+		component: () => Instituicoes
 	}
 ]
 

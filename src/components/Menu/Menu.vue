@@ -9,8 +9,10 @@
 	>
 		<template #header>
 			<div class="sidebar__cabecalho">
-				<img class="sidebar__logo" src="@/assets/images/logo30x30.svg" alt="Logo" />
-				<h1 class="sidebar__titulo">SisProForm</h1>
+				<router-link class="sidebar__link" to="/">
+					<img class="sidebar__logo" src="@/assets/images/logo30x30.svg" alt="Logo" />
+					<h1 class="sidebar__titulo">SisProForm</h1>
+				</router-link>
 			</div>
 		</template>
 
@@ -19,13 +21,13 @@
 				<div class="secao__titulo">PROJETOS</div>
 				<ul class="secao__menu">
 					<li class="secao__item">
-						<router-link class="secao__link" to="/projetos/abertos"
-							><i class="pi pi-objects-column"></i>Abertos</router-link
+						<router-link class="secao__link" to="/projetos/atuais"
+							><i class="pi pi-objects-column"></i>Atuais</router-link
 						>
 					</li>
 					<li class="secao__item">
-						<router-link class="secao__link" to="/">
-							<i class="pi pi-th-large"></i>Fechados</router-link
+						<router-link class="secao__link" to="/projetos/encerrados">
+							<i class="pi pi-th-large"></i>Encerrados</router-link
 						>
 					</li>
 				</ul>
@@ -34,22 +36,22 @@
 				<div class="secao__titulo">ENTIDADES</div>
 				<ul class="secao__menu">
 					<li class="secao__item">
-						<router-link class="secao__link" to="/"
+						<router-link class="secao__link" to="/pesquisadores"
 							><i class="pi pi-id-card"></i>Pesquisadores</router-link
 						>
 					</li>
 					<li class="secao__item">
-						<router-link class="secao__link" to="/"
+						<router-link class="secao__link" to="/orientadores"
 							><i class="pi pi-users"></i>Orientadores</router-link
 						>
 					</li>
 					<li class="secao__item">
-						<router-link class="secao__link" to="/"
+						<router-link class="secao__link" to="/orientandos"
 							><i class="pi pi-user"></i>Orientandos</router-link
 						>
 					</li>
 					<li class="secao__item">
-						<router-link class="secao__link" to="/"
+						<router-link class="secao__link" to="/instituicoes"
 							><i class="pi pi-graduation-cap"></i>Instituições</router-link
 						>
 					</li>
@@ -67,9 +69,10 @@ import Sidebar from 'primevue/sidebar'
 .sidebar {
 	width: 200px;
 
-	&__cabecalho {
+	&__link {
 		display: flex;
 		align-items: center;
+		text-decoration: none;
 		gap: var(--g-8);
 	}
 
