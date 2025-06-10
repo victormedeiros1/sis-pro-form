@@ -69,7 +69,7 @@
 				</div>
 
 				<div class="formulario__grupo">
-					<SelecaoUnica
+					<SeletorRadio
 						id="sua-pesquisa-envolve-dados-do-sus"
 						v-model:opcaoSelecionada="formularioCriarProjeto.suaPesquisaEnvolveDadosDoSUS"
 						rotulo="Sua pesquisa envolve dados do SUS?"
@@ -134,11 +134,11 @@ import AreaDeTexto from '@/components/Campos/AreaDeTexto/AreaDeTexto.vue'
 import CampoDeLista from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
 import CampoDeTexto from '@/components/Campos/CampoDeTexto/CampoDeTexto.vue'
 import MultiSeletor from '@/components/Campos/MultiSeletor/MultiSeletor.vue'
-import SelecaoUnica from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
+import SeletorRadio from '@/components/Campos/SeletorRadio/SeletorRadio.vue'
 
 import Button from 'primevue/button'
 
-import { OpcoesSelecaoUnica } from '@/components/Campos/SelecaoUnica/SelecaoUnica.vue'
+import { OpcoesSeletorRadio } from '@/components/Campos/SeletorRadio/SeletorRadio.vue'
 import { ListaDeCampos } from '@/components/Campos/ListaDeCampos/ListaDeCampos.vue'
 
 import { Opcoes } from '@/types/gerais'
@@ -170,7 +170,7 @@ const opcoesTiposDaPesquisa = ref<Opcoes[]>([
 	}
 ])
 
-const opcoesSuaPesquisaEnvolveDadosDoSUS = ref<OpcoesSelecaoUnica[]>([
+const opcoesSuaPesquisaEnvolveDadosDoSUS = ref<OpcoesSeletorRadio[]>([
 	{
 		id: 'sim',
 		rotulo: 'Sim',
