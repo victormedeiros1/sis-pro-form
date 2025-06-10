@@ -2,10 +2,10 @@ C
 <template>
 	<div class="campo-de-telefone">
 		<label class="campo-de-telefone__rotulo rotulo" :for="id">{{ rotulo }}</label>
-		<InputText
+		<InputMask
 			class="campo-de-telefone__campo campo"
 			:id="id"
-			:label="rotulo"
+			:mask="'(99) 99999-9999'"
 			:placeholder="textoAuxiliar"
 			@update:model-value="emitirTelefone"
 			v-model="telefone"
@@ -15,6 +15,8 @@ C
 </template>
 
 <script setup lang="ts">
+import InputMask from 'primevue/inputmask'
+
 import { nextTick, ref } from 'vue'
 
 interface Props {

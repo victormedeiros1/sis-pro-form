@@ -1,10 +1,10 @@
 <template>
 	<div class="campo-de-cpf">
 		<label class="campo-de-cpf__rotulo rotulo" :for="id">{{ rotulo }}</label>
-		<InputText
+		<InputMask
 			class="campo-de-cpf__campo campo"
 			:id="id"
-			:label="rotulo"
+			:mask="'999.999.999-99'"
 			:placeholder="textoAuxiliar"
 			@update:model-value="emitirCPF"
 			v-model="cpf"
@@ -14,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+import InputMask from 'primevue/inputmask'
+
 import { nextTick, ref } from 'vue'
 
 interface Props {
