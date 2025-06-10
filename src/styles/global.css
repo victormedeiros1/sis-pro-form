@@ -35,3 +35,14 @@ textarea.campo {
   width: 100%;
   font-size: var(--fs-14);
 }
+
+.formulario {
+  display: flex;
+	flex-direction: column;
+	gap: var(--g-16);
+}
+
+.formulario__grupo {
+  display: flex;
+	gap: var(--g-16);
+}
