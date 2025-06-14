@@ -1,6 +1,6 @@
 <template>
 	<Container>
-		<Menu />
+		<!-- <Menu /> -->
 		<RouterView />
 	</Container>
 </template>

@@ -1,47 +1,33 @@
 <template>
-	<div class="campo-de-texto">
+	<div class="campo-de-texto campo-container">
 		<label class="campo-de-texto__rotulo rotulo" :for="id">{{ rotulo }}</label>
-		<InputText
-			class="campo-de-texto__campo campo"
-			:id="id"
-			:label="rotulo"
-			:placeholder="textoAuxiliar"
-			@update:model-value="emitirTexto"
-			v-model="texto"
-			size="small"
-		/>
+
+		<Field :name="nome" v-slot="{ field }">
+			<InputText
+				class="campo-de-texto__campo campo"
+				v-bind="field"
+				:id="id"
+				:name="nome"
+				:placeholder="textoAuxiliar"
+				size="small"
+			/>
+		</Field>
+
+		<ErrorMessage class="campo-mensagem-de-erro" :name="nome" />
 	</div>
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
+import InputText from 'primevue/inputtext'
+import { Field, ErrorMessage } from 'vee-validate'
 
 interface Props {
 	id: string
 	rotulo: string
 	textoAuxiliar?: string
+	nome: string
 }
-
 defineProps<Props>()
-
-const emitir = defineEmits<{
-	(evento: 'update:texto', texto: string): void
-}>()
-
-const texto = ref('')
-
-const emitirTexto = (): void => {
-	nextTick(() => {
-		emitir('update:texto', texto.value)
-	})
-}
 </script>
 
-<style scoped lang="scss">
-.campo-de-texto {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	gap: var(--g-8);
-}
-</style>
+<style scoped lang="scss"></style>
