@@ -32,7 +32,7 @@ import { computed } from 'vue'
 
 interface Props {
 	id: string
-	rotulo: string
+	rotulo?: string
 	textoAuxiliar?: string
 	nome: string
 	required?: boolean
