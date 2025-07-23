@@ -1,20 +1,28 @@
 [
   {
-    "nome": "Pesquisador 1",
-    "cpf": "12345678900",
+    "id": 1,
+    "nome": "Carlos Lima Pereira",
+    "cpf": "12345678901",
+    "email": "carloslima@gmail.com",
     "telefone": "11987654321",
-    "email": "pesquisador1@example.com"
+    "endereco": "Rua dos Caiacós",
+    "numero": "123",
+    "cep": "12345678",
+    "bairro": "Centro",
+    "estado": "SP",
+    "cidade": "São Paulo"
   },
   {
-    "nome": "Pesquisador 2",
-    "cpf": "23456789001",
-    "telefone": "21976543210",
-    "email": "pesquisador2@example.com"
-  },
-  {
-    "nome": "Pesquisador 3",
-    "cpf": "34567890102",
-    "telefone": "31965432109",
-    "email": "pesquisador3@example.com"
+    "id": 2,
+    "nome": "Ana Maria Souza",
+    "cpf": "10987654321",
+    "email": "anamariasouza@gmail.com",
+    "telefone": "11912345678",
+    "endereco": "Avenida das Flores",
+    "numero": "456",
+    "cep": "87654321",
+    "bairro": "Jardim das Rosas",
+    "estado": "RJ",
+    "cidade": "Rio de Janeiro"
   }
 ]
