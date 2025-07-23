@@ -1,5 +1,5 @@
 <template>
-	<h1>Projetos abertos</h1>
+	<h1>Projetos atuais</h1>
 </template>
 
 <script setup lang="ts"></script>

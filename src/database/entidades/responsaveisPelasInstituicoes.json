@@ -1,20 +1,32 @@
 [
   {
-    "nome": "Responsável 1",
+    "nome": "Dr. Marcelo Henrique Silva",
     "cargo": "Reitor",
-    "nomeDaInstituicao": "Universidade XYZ",
-    "cnpjDaInstituicao": "12345678000190"
+    "nomeDaInstituicao": "Universidade Federal de Tecnologia e Inovação",
+    "cnpjDaInstituicao": "10.234.567/0001-89"
   },
   {
-    "nome": "Responsável 2",
-    "cargo": "Diretor",
-    "nomeDaInstituicao": "Faculdade ABC",
-    "cnpjDaInstituicao": "23456789000101"
+    "nome": "Profa. Camila Duarte Almeida",
+    "cargo": "Diretora Acadêmica",
+    "nomeDaInstituicao": "Faculdade de Ciências Humanas e Sociais Integradas",
+    "cnpjDaInstituicao": "20.345.678/0001-45"
   },
   {
-    "nome": "Responsável 3",
-    "cargo": "Coordenador",
-    "nomeDaInstituicao": "Escola DEF",
-    "cnpjDaInstituicao": "34567890100102"
+    "nome": "Prof. Eduardo Lima Ramos",
+    "cargo": "Coordenador de Pesquisa",
+    "nomeDaInstituicao": "Escola Técnica de Saúde Pública do Nordeste",
+    "cnpjDaInstituicao": "30.456.789/0001-32"
+  },
+  {
+    "nome": "Dra. Patrícia Gomes Vieira",
+    "cargo": "Presidente do Comitê de Ética",
+    "nomeDaInstituicao": "Instituto Nacional de Bioética e Pesquisa Clínica",
+    "cnpjDaInstituicao": "40.567.890/0001-67"
+  },
+  {
+    "nome": "Sr. Rafael Tavares Monteiro",
+    "cargo": "Gerente de Projetos",
+    "nomeDaInstituicao": "Centro de Inovação Tecnológica do Sul",
+    "cnpjDaInstituicao": "50.678.901/0001-23"
   }
 ]
