@@ -1,50 +1,36 @@
 C
 <template>
-	<div class="campo-de-telefone">
+	<div class="campo-de-telefone campo-container">
 		<label class="campo-de-telefone__rotulo rotulo" :for="id">{{ rotulo }}</label>
-		<InputMask
-			class="campo-de-telefone__campo campo"
-			:id="id"
-			:mask="'(99) 99999-9999'"
-			:placeholder="textoAuxiliar"
-			@update:model-value="emitirTelefone"
-			v-model="telefone"
-			size="small"
-		/>
+
+		<Field :name="nome" v-slot="{ field, value, handleChange }">
+			<InputMask
+				class="campo-de-telefone__campo campo"
+				v-bind="field"
+				:id="id"
+				:mask="'(99) 99999-9999'"
+				:placeholder="textoAuxiliar"
+				:modelValue="value"
+				@update:modelValue="handleChange"
+			/>
+		</Field>
+
+		<ErrorMessage class="campo-mensagem-de-erro" :name="nome" />
 	</div>
 </template>
 
 <script setup lang="ts">
 import InputMask from 'primevue/inputmask'
-
-import { nextTick, ref } from 'vue'
+import { Field, ErrorMessage } from 'vee-validate'
 
 interface Props {
 	id: string
 	rotulo: string
 	textoAuxiliar?: string
+	nome: string
 }
 
 defineProps<Props>()
-
-const emitir = defineEmits<{
-	(evento: 'update:telefone', telefone: string): void
-}>()
-
-const telefone = ref('')
-
-const emitirTelefone = (): void => {
-	nextTick(() => {
-		emitir('update:telefone', telefone.value)
-	})
-}
 </script>
 
-<style scoped lang="scss">
-.campo-de-telefone {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	gap: var(--g-8);
-}
-</style>
+<style scoped lang="scss"></style>
