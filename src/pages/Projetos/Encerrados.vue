@@ -1,5 +1,5 @@
 <template>
-	<h1>Projetos fechados</h1>
+	<h1>Projetos encerrados</h1>
 </template>
 
 <script setup lang="ts"></script>
