@@ -89,6 +89,7 @@ const removerCampo = (id: string): void => {
 
 <style scoped lang="scss">
 .lista-de-campos {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: var(--g-8);

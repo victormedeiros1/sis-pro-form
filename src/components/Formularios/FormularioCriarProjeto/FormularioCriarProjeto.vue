@@ -204,6 +204,8 @@ const formularioCriarProjeto = ref<FormularioCriarProjeto>({
 
 <style scoped lang="scss">
 .criar-projeto {
+	width: 100%;
+
 	.formulario {
 		&__cabecalho {
 			margin-bottom: var(--m-16);

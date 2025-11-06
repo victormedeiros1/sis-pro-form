@@ -43,6 +43,7 @@ const emitirTexto = (): void => {
 
 <style scoped lang="scss">
 .area-de-texto {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: var(--g-8);

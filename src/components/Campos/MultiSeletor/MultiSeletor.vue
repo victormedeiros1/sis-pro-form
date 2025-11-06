@@ -48,7 +48,6 @@ const emitirOpcoesSelecionadas = (): void => {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	gap: var(--g-8);
 
 	&__seletor {
 		font-size: var(--fs-14);
