@@ -9,10 +9,20 @@
 	>
 		<template #header>
 			<div class="sidebar__cabecalho">
-				<router-link class="sidebar__link" to="/">
-					<img class="sidebar__logo" src="@/assets/images/logo30x30.svg" alt="Logo" />
-					<h1 class="sidebar__titulo">SisProForm</h1>
-				</router-link>
+				<div class="sidebar__logo">
+					<router-link class="sidebar__link" to="/">
+						<img class="sidebar__logo" src="@/assets/images/logo30x30.svg" alt="Logo" />
+						<h1 class="sidebar__titulo">SisProForm</h1>
+					</router-link>
+				</div>
+				<div>
+					<Button
+						label="NOVO PROJETO"
+						size="small"
+						icon="pi pi-plus"
+						@click="redirecionarParaNovoProjeto"
+					/>
+				</div>
 			</div>
 		</template>
 
@@ -62,12 +72,24 @@
 </template>
 
 <script setup lang="ts">
+import { router } from '@/router'
+import Button from 'primevue/button'
 import Sidebar from 'primevue/sidebar'
+
+const redirecionarParaNovoProjeto = () => {
+	router.push('/projetos/novo')
+}
 </script>
 
 <style scoped lang="scss">
 .sidebar {
 	width: 200px;
+
+	&__cabecalho {
+		display: flex;
+		flex-direction: column;
+		gap: var(--g-24);
+	}
 
 	&__link {
 		display: flex;

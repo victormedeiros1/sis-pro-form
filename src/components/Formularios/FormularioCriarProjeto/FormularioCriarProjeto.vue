@@ -10,6 +10,7 @@
 						id="titulo-da-pesquisa"
 						v-model:texto="formularioCriarProjeto.tituloDaPesquisa"
 						rotulo="Título da pesquisa"
+						nome="titulo-da-pesquisa"
 						texto-auxiliar="Ex: Estudo sobre a COVID-19"
 					/>
 					<MultiSeletor
@@ -62,6 +63,7 @@
 				<div class="formulario__grupo">
 					<CampoDeTexto
 						id="quais-etapas-serao-realizadas"
+						nome="quais-etapas-serao-realizadas"
 						v-model:texto="formularioCriarProjeto.quaisEtapasSeraoRealizadas"
 						rotulo="Quais etapas serão realizadas?"
 						texto-auxiliar="Ex: Coleta de dados, Análise dos dados, etc."
@@ -80,12 +82,14 @@
 				<div class="formulario__grupo formulario__grupo--2-colunas">
 					<CampoDeTexto
 						id="cnpj-da-instituicao"
+						nome="cnpj-da-instituicao"
 						v-model:texto="formularioCriarProjeto.cnpjDaInstituicao"
 						rotulo="CNPJ da Instituição"
 						texto-auxiliar="Ex: 00.000.000/0000-00"
 					/>
 					<CampoDeTexto
 						id="inserir-nome-do-cep"
+						nome="inserir-nome-do-cep"
 						v-model:texto="formularioCriarProjeto.inserirNomeDoCep"
 						rotulo="Inserir nome do CEP"
 						texto-auxiliar="Ex: Rio Grande do Norte"

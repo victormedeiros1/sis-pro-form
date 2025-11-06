@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Principal from '@/pages/Principal/Principal.vue'
 import Atuais from '@/pages/Projetos/Atuais.vue'
+import NovoProjeto from '@/pages/Projetos/NovoProjeto.vue'
 import Encerrados from '@/pages/Projetos/Encerrados.vue'
 import Pesquisadores from '@/pages/Pesquisadores/Pesquisadores.vue'
 import Orientadores from '@/pages/Orientadores/Orientadores.vue'
@@ -13,6 +14,11 @@ const routes = [
 		path: '/',
 		name: 'Principal',
 		component: Principal
+	},
+	{
+		path: '/projetos/novo',
+		name: 'Novo Projeto',
+		component: NovoProjeto
 	},
 	{
 		path: '/projetos/atuais',
