@@ -1,47 +1,34 @@
 <template>
-	<div class="campo-de-numero">
+	<div class="campo-de-numero campo-container">
 		<label class="campo-de-numero__rotulo rotulo" :for="id">{{ rotulo }}</label>
-		<InputText
-			class="campo-de-numero__campo campo"
-			:id="id"
-			:label="rotulo"
-			:placeholder="textoAuxiliar"
-			@update:model-value="emitirTexto"
-			v-model="numero"
-			size="small"
-		/>
+
+		<Field :name="nome" v-slot="{ field }">
+			<InputText
+				class="campo-de-numero__campo campo"
+				v-bind="field"
+				:id="id"
+				:label="rotulo"
+				:placeholder="textoAuxiliar"
+				size="small"
+			/>
+		</Field>
+
+		<ErrorMessage class="campo-mensagem-de-erro" :name="nome" />
 	</div>
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
+import InputText from 'primevue/inputtext'
+import { Field, ErrorMessage } from 'vee-validate'
 
 interface Props {
 	id: string
 	rotulo: string
 	textoAuxiliar?: string
+	nome: string
 }
 
 defineProps<Props>()
-
-const emitir = defineEmits<{
-	(evento: 'update:numero', numero: string): void
-}>()
-
-const numero = ref('')
-
-const emitirTexto = (): void => {
-	nextTick(() => {
-		emitir('update:numero', numero.value)
-	})
-}
 </script>
 
-<style scoped lang="scss">
-.campo-de-numero {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	gap: var(--g-8);
-}
-</style>
+<style scoped lang="scss"></style>
